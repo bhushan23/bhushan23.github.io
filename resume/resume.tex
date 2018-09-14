@@ -5,7 +5,7 @@
 %------------------------
 
 
-\documentclass[a4paper, 10.5pt]{article}
+\documentclass[a4paper, 11pt]{article}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{latexsym}
@@ -123,8 +123,8 @@
   \resumeSubHeadingListStart
   %  \resumeSubItem{\href{https://github.com/bhushan23/Light-Estimation/}{Face Illumination estimation}}
 
-    \resumeSubItem{\href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{Co-Operative GANs}}{Training GANs is tricky and often leads to mode collapsing. Training multiple generators and copy weights of best performing to other generators at the end of epoch. All generators starts from the best spot on every epoch. This solves mode collapsing, saddle point and local minima problem in training;\textbf{ \href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{Source \& Results}}; [Python, PyTorch]}
-    \resumeSubItem{\href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{ADMM Optimizer in PyTorch}}{Implemented Alternating Direction Method of Multipliers(ADMM) optimizer for Lasso and Ridge regression in PyTorch. Tested on Diabetes dataset; Speed up of 1.6x compare to Scikit-Learn's state of the art Lasso and Ridge solver; \textbf{\href{https://github.com/bhushan23/ADMM/blob/master/REPORT_ADMM_IN_PYTORCH.pdf}{Report}, \href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{Source},  \href{https://github.com/bhushan23/ADMM}{Results}}; [Python, PyTorch]}
+    \resumeSubItem{\href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{Co-Operative GANs}}{Auto-ML approach for GAN training- Train multiple generators and copy weights of best performing to other generators at the end of epoch. Solves mode collapsing, saddle point and local minima problem in training;\textbf{ \href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{Source \& Results}}; [Python, PyTorch]}
+    \resumeSubItem{\href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{ADMM Optimizer in PyTorch}}{Implemented ADMM optimizer in PyTorch. Tested on Diabetes dataset; 1.6x faster than Scikit-Learn's state of the art Lasso and Ridge solver; \textbf{\href{https://github.com/bhushan23/ADMM/blob/master/REPORT_ADMM_IN_PYTORCH.pdf}{Report}, \href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{Source},  \href{https://github.com/bhushan23/ADMM}{Results}}; [Python, PyTorch]}
 %    \resumeSubItem{\href{https://github.com/bhushan23/Computer-Vision}{Deep Learning for Computer Vision}}{Implemented CNNs for CIFAR-10 object recognition; \href{https://github.com/bhushan23/GAN/}{Implemented Auencoders and GANs for image generation}; [Python, PyTorch]}
     \resumeSubItem{\href{https://github.com/bhushan23/SBU-ML-Assignment}{ML Algorithms}}{Implemented Ridge Regression, Lasso Solver, Support Vector Machine using Stochastic Gradient Descent and Quadratic Programming; Human Action recognition using CNN and RNN \textbf{\href{https://github.com/bhushan23/SBU-ML-Assignment}{Source}}; [Python, Matlab]}
    % \resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Managing power supply of appliances for energy conservation}} {Home appliances consumes significant power in stand by mode; Internet of Things and Machine Learning solution; LSTM model for predicting appliances' usage pattern and control power supply accordingly. \textbf{Links:}\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{ Reports}, \href{https://github.com/bhushan23/SmartOff}{Source}; [Python, Scikit-learn, Keras]}
@@ -132,8 +132,7 @@
    % \resumeSubItem{Competitions}{Worked on \href{http://ai.bu.edu/visda-2018/}{Visual Domain Adaptation}, \href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018: AI for Prosthetics}}
     % \resumeSubItem{\href{http://urc.marssociety.org/home}{University Rover Challenge}}{Member of StonyBrook Mars Rover Challenge Computer Vision team; Working on to create depth map for avoiding large obstacles using ZED camera; [OpenCV, Python, OnGoing]}
     %\resumeSubItem{\href{https://github.com/bhushan23/pytorch-rl}{PyTorch-RL}}{Deep Reinforcement Learning algorithms implementation ready to be used for PyTorch [Python, PyTorch, OnGoing]}
-    \resumeSubItem{\href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018 AI for Prosthetics Challenge}}{Using Reinforcement learning to model human with a prosthetic leg to walk and run; Using Deep Deterministic Policy Gradient and Proximal Policy Optimization
-    [Python, Keras, PyTorch, Ongoing]}
+    \resumeSubItem{\href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018 AI for Prosthetics Challenge}}{Using Reinforcement learning to model human with a prosthetic leg to walk and run; [Python, Keras, PyTorch, Ongoing]}
     %Using \href{https://github.com/keras-rl/keras-rl}{keras-rl} library; [Python, Keras, PyTorch, Ongoing]} 
 %    \resumeSubItem{\href{http://ai.bu.edu/visda-2018/}{Visual Domain Adaptation Challenge}}{Developing model to adapt between synthetic and real objects for detection; Developing a method of unsupervised domain adaptation for object classification with additional unknown categories; [Python, PyTorch, OnGoing]}
     \resumeItemListEnd
@@ -165,8 +164,8 @@ com/pytorch/pytorch/issues/9530}{Keys from load state};\href{https://docs.google
       {Computer Vision Lab, Stony Brook University}{StonyBrook, NY}
       {Master's Thesis}{Jan 2017 - Current}
       \resumeItemListStart
-        \resumeSubItem{Face Illumination Estimation}{Estimating face illumination using spherical harmonics; Used domain adapation to overcome lack of ground truth. Used GANs for domain adaptation to re-use network trained on synthetic data.Used \href{https://drive.google.com/file/d/1RvyCiDMg--jyO8lLBvopp0o271LvREoa/view}{SIRFS} method for generating shading, albedo, normal and lighting for synthetic and CelebA dataset. Enhanced \href{https://jonbarron.info/}{Jon Barron's} \href{https://github.com/bhushan23/SIRFS}{SIRFS \_fast implementation}; \textbf{\href{https://github.com/bhushan23/Light-Estimation/blob/master/Lighting_Estimation_Report.pdf}{Report}, \href{https://github.com/bhushan23/Light-Estimation/}{Source \& Results}}; [Python, Matlab, PyTorch]}
-        \resumeSubItem{Modeling Illumination in Neural Network}{Estimating lighting sources, direction is very important for face editing tasks. Ongoing research. [Ongoing, Python, Matlab, PyTorch, CVPR 2019]}
+        \resumeSubItem{Face Illumination Estimation}{GANs for domain adaptation. Used \href{https://drive.google.com/file/d/1RvyCiDMg--jyO8lLBvopp0o271LvREoa/view}{SIRFS} method for generating shading, albedo, normal and lighting for synthetic and CelebA dataset. Enhanced \href{https://jonbarron.info/}{Jon Barron's} \href{https://github.com/bhushan23/SIRFS}{SIRFS \_fast implementation}; \textbf{\href{https://github.com/bhushan23/Light-Estimation/blob/master/Lighting_Estimation_Report.pdf}{Report}, \href{https://github.com/bhushan23/Light-Estimation/}{Source \& Results}}; [Python, Matlab, PyTorch]}
+        \resumeSubItem{Modeling Illumination in Neural Network}{Ongoing research; Target CVPR 2019}
       \resumeItemListEnd
     \resumeSubheadingTwo
       {Nvidia}{Santa Clara, CA}
@@ -180,7 +179,7 @@ com/pytorch/pytorch/issues/9530}{Keys from load state};\href{https://docs.google
       {Nvidia}{Pune, India}
       {System Software Engineer, Optimizing Compiler}{Jun 2015 - Jul 2017}
       \resumeItemListStart
-        \resumeSubItem{Optimizing compiler} {Worked on Nvidia Tegra graphics and CUDA compute compiler; Improved peephole optimizations; OpenGL/DX driver interfaces; Optimization for compile time improvements; Developed Profiling infrastructure; Worked on Tegra(Android, Nintendo) compiler issues; Worked on Coverity, GCov; [C/C++]}
+        \resumeSubItem{Optimizing compiler} {Nvidia Tegra graphics and CUDA compute compiler; Peephole optimizations; OpenGL/DX driver interfaces; Optimization for compile time improvements; Developed Profiling infrastructure; Worked on Tegra(Android, Nintendo) compiler issues; Worked on Coverity, GCov; [C/C++]}
         \resumeSubItem{Assembler}{Implemented DWARF 2.0 compliant debug frame support for CUDA 9.0. [C]}
       \resumeItemListEnd
 
@@ -225,7 +224,7 @@ com/pytorch/pytorch/issues/9530}{Keys from load state};\href{https://docs.google
 \section{Awards}
 \resumeSubHeadingListStart
     \resumeSubItem{Project rank 1/126}{PBQP based register allocator project secured first place at VIT(2015)}
-    \resumeSubItem{Paper Presentation rank 2/88}{Page Replacement algorithm using hashing got second place at Papyrus, VIT(2014)}
+    \resumeSubItem{Paper Presentation rank 2/88}{Page Replacement algorithm using hashing at Papyrus, VIT(2014)}
       \resumeSubItem{Competitive Programming}{\textbf{Rank 2/66} in \href{https://www.kaggle.com/c/hw2-activity-recognition-cse512-spr18/leaderboard}{Kaggle Competition} for Human Acticity Recognition(2018); \textbf{Rank 1/600} at programming contest(C-Athlon)(2014); Qualified for \textbf{ACM ICPC} Amritapuri regionals(2013)}
    \resumeSubHeadingListEnd
 %-------------------------------------------
