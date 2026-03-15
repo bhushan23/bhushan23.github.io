@@ -4,8 +4,7 @@
 % License : MIT
 %------------------------
 
-
-\documentclass[a4paper, 11pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{latexsym}
@@ -40,8 +39,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
@@ -65,15 +64,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubheadingTwo}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} \textit{\small (#3)} & \textit{\small #4} \\
-      %\textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-10pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{2pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -84,153 +75,165 @@
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://bhushansonawane.com/}{\Large Bhushan B. Sonawane}} & Email: \href{mailto:bhushansonawane94@gmail.com}{bhushansonawane94@gmail.com}\\
-  \href{https://github.com/bhushan23}{github.com/bhushan23} & Mobile: N/A \\
+  \textbf{\href{http://bhushansonawane.com/}{\Large Bhushan B. Sonawane}} & \href{mailto:bhushansonawane94@gmail.com}{bhushansonawane94@gmail.com}\\
+  \href{http://bhushansonawane.com/}{bhushansonawane.com} & +1-631-590-9644 \\
 \end{tabular*}
 
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Qualcomm}{Santa Clara, CA}
+      {Senior Engineering Manager, ML Platform}{Nov 2023 - Present}
+      \resumeItemListStart
+      \resumeSubItem{Quantization Tools}{Leading state-of-the-art quantization tool \href{https://github.com/quic/aimet}{AIMET} based on PyTorch and ONNX; Advanced quantization techniques for LLMs; Developer tools to quantize models with ease}
+      \resumeSubItem{LLM Quantization}{Shipping \href{https://quic.github.io/aimet-pages/releases/latest/tutorials/quantization_recipe.html}{LLM quantization recipes} using aimet-torch and aimet-onnx; End-to-end workflow to quantize LLMs and deploy on Snapdragon platform via \href{https://aihub.qualcomm.com/}{AI Hub Models} and \href{https://workbench.aihub.qualcomm.com/docs/}{Workbench}}
+      \resumeSubItem{Integrations}{Expanded \href{https://microsoft.github.io/Olive/features/quantization.html#quantize-with-ai-model-efficiency-toolkit}{Microsoft Olive} capabilities with AIMET integration; Making tools accessible to developers worldwide via \href{https://aihub.qualcomm.com/}{AI Hub Workbench}}
+      \resumeSubItem{Downstream Toolchain}{Cross-functional collaboration on new quantizer spec bridging off-target to on-target accuracy gaps; Enhanced developer productivity for model accuracy debugging; Reduced release-to-release regressions in \href{https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk}{QAIRT}}
+      \resumeSubItem{Developer Workflow}{Streamlined workflow using aimet-torch for QAT and aimet-onnx for PTQ; Simplified APIs and tools for faster model on-boarding}
+      \resumeSubItem{Performance}{Optimized latency and reduced memory footprint for GenAI with graph optimizations and traversals; Making onnx-ir core component to improve memory utilizations of aimet-onnx;}
+      \resumeSubItem{Customer Success}{Trained CEs and customers on automated self-serve workflows; Reduced escalations and accelerated model on-boarding; Created debugging workflows for rapid iteration;}
+      \resumeSubItem{\href{https://github.com/quic/ai-hub-apps}{AI Hub Apps}}{Sample apps for Android and edge devices enabling developers to deploy models on-device}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Tetra AI}{Mountain View, CA}
+      {Founding Machine Learning Engineer, ML Platform}{Aug 2022 - Nov 2023}
+      \resumeItemListStart
+      \resumeSubItem{\href{https://aihub.qualcomm.com/}{AI Hub Models}}{Spearheaded development of first-of-its-kind ML model zoo for optimized on-device models; YAML-based spec capturing performance and accuracy metrics per release}
+      \resumeSubItem{Weight De-duplication}{Created model de-duplicator enabling weight sharing for compiled models; Achieved up to 32x model size reduction}
+      \resumeSubItem{Microsoft Teams}{Led AI use-cases: segmentation, audio, video codec; Optimized \href{https://github.com/bhushan23/DCVC}{DCVC model} for on-device deployment with graph optimizations for better NPU utilization}
+      \resumeSubItem{Graph Infrastructure}{Developed graph-to-graph transformation infrastructure on top of \href{https://github.com/apple/coremltools}{coremltools}}
+      \resumeSubItem{Platform Infrastructure}{Extended AI Hub to support new model formats; Introduced directory-based formats and ahead-of-time compiled model support}
+      \resumeSubItem{Team Impact}{Streamlined processes; mentored developers on graph optimizations; Drove features improving AI developer experience}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Apple}{Cupertino, CA}
+      {Senior Machine Learning Engineer, ML Platform}{June 2019 - Aug 2022}
+      \resumeItemListStart
+      \resumeSubItem{\href{https://coremltools.readme.io/docs/model-intermediate-language}{MIL}}{Designed intermediate programming language unifying conversion stack, serialization, and optimization; Core representation format for GenAI on-boarding via CoreML; Introduced Composite Operators to build custom pipeline; [C++, Python, Objective-C]}
+      \resumeSubItem{Weight File Format}{Created unified weight file format shared across stack; Minimized compile-time memory footprint; Enabling LLM conversion and deployment on CoreML;}
+      \resumeSubItem{Performance}{Fixed and optimized CPU kernels; Implemented graph transformations for model efficiency}
+      \resumeSubItem{Auto-upgrade Tool}{Led development of model format migration tool; On-boarded internal groups including Vision Pro}
+      \resumeSubItem{Cross-functional Impact}{Collaborated across teams to improve end-to-end stack; Created migration guidebook; Contributed to power estimation for upcoming hardware; Enabled Stable Diffusion and GenAI models on-device}
+      \resumeSubItem{\href{https://github.com/onnx/onnx-coreml}{ONNX-CoreML Converter}}{Led converter for deploying ONNX models to iOS; Implemented neural network layer conversions for CoreML 3.0 [Python]
+      \textbf{\href{https://github.com/onnx/onnx-coreml/commits?author=bhushan23}{\underline{view contributions}}}}
+      \resumeSubItem{\href{https://github.com/apple/coremltools/}{CoreML Tools}}{Implemented optimization passes, image input support, custom layers; Updated builder API for CoreML 3.0 spec [Python, Objective-C]
+      \textbf{\href{https://github.com/apple/coremltools/commits?author=bhushan23}{\underline{view contributions}}}}
+      \resumeSubItem{Developer Enablement}{Enabled first-party and third-party developers to deploy models on CoreML; Drove community engagement for coremltools}
+     \resumeItemListEnd
+    \resumeSubheading
+      {Nvidia}{Santa Clara, CA}
+      {Intern, SPIR-V Compiler}{May 2018 - Aug 2018}
+      \resumeItemListStart
+      \resumeSubItem{Compiler Optimization Controller}{Developed infrastructure for controlling optimization phase ordering and parameter tuning [C++, LLVM, Python]}
+      \resumeSubItem{Knobs Infrastructure}{Developed infrastructure enabling compiler debugging and experimentation [C++, LLVM]}
+      \resumeItemListEnd
+    \resumeSubheading
+      {\href{http://www.nvidia.com}{Nvidia}}{Pune, India}
+      {System Software Engineer, Compiler}{Jun 2015 - Jul 2017}
+      \resumeItemListStart
+        \resumeItem{Profiling Infrastructure}
+          {Collaborated with OpenGL driver and GLSL front-end teams to build compile-time and memory usage profiling [C++]}
+        \resumeItem{Early Copy Propagation}
+          {Optimized phase ordering reducing instructions processed; Cut compile time from hours to minutes for specialized shaders [C++]}
+        \resumeItem{Assembler}
+          {Implemented DWARF 2.0 debug frame support for CUDA 9.0; Added vendor extensions for DWARF 3.0 compatibility [C]}
+        \resumeItem{Optimizations}
+          {Enhanced peephole optimizations, interfaces, and heuristics for Tegra Graphics and CUDA [C++]}
+      \resumeItemListEnd
 
+    \resumeSubheading
+      {Nvidia}{Pune, India}
+      {Intern, Compiler}{Jun 2014 - Apr 2015}
+      \resumeItemListStart
+        \resumeItem{\href{http://slides.com/bhushansonawane/deck/}{PBQP Register Allocator}}
+          {Implemented PBQP-based register allocator for Nvidia compiler; Improved 98\% of graphics and compute use cases [C++]
+          \href{http://slides.com/bhushansonawane/deck/#/}{\textbf{\underline{view presentation}}}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {SUNY StonyBrook University}
-      {StonyBrook, NY}
-      {Master of Science in Computer Science (Data Science Specialization); GPA: 3.57$/4$}{Aug 2017 - May 2019}
+      {\href{http://www.stonybrook.edu/}{SUNY StonyBrook University}}{StonyBrook, NY}
+      {Master of Science in Computer Science}{Aug 2017 - May 2019}
       \resumeItemListStart
-         \resumeItem{Thesis} {Solving Lighting Estimation problem using deep learning; Advisor: \href{http://www3.cs.stonybrook.edu/~samaras/}{Professor Dimitris Samaras};} 
-        %\resumeItem{Research Lab} {\href{http://www3.cs.stonybrook.edu/~cvl/index.html}{Computer Vision Lab}}{}
-        \resumeItem{Courses} {\href{http://www3.cs.stonybrook.edu/~minhhoai/courses/cse512/index.html}{Machine Learning}, \href{http://francesco.orabona.com/teaching.html}{Convex Optimization}, 
-        Introduction to Computer Vision, Natural Language Processing, 
-        \href{http://www3.cs.stonybrook.edu/~anshul/courses/cse544_s18/}{Probability and Statistics}, \href{http://www3.cs.stonybrook.edu/~cse537/index.html}{Artificial Intelligence}
-        %\href{http://www3.cs.stonybrook.edu/~rezaul/CSE548-F17.html}{Analysis of Algorithm}
-        }
-        \resumeItem{Senior Research Assistant}{Converting high-resolution medical images into tiled-tiff format [C]} 
+         \resumeItem{Thesis} {Face illumination estimation advised by \href{http://www3.cs.stonybrook.edu/~samaras/}{Professor Dimitris Samaras}; Member of \href{http://www3.cs.stonybrook.edu/~cvl/index.html}{Computer Vision Lab}}
+        \resumeItem{Courses} {\href{http://www3.cs.stonybrook.edu/~minhhoai/courses/cse512/index.html}{Machine Learning}, \href{http://francesco.orabona.com/teaching.html}{Convex Optimization}, \href{http://www3.cs.stonybrook.edu/~anshul/courses/cse544_s18/}{Probs and Stats}, \href{http://www3.cs.stonybrook.edu/~cse537/index.html}{Artificial Intelligence}, \href{http://www3.cs.stonybrook.edu/~rezaul/CSE548-F17.html}{Analysis of Algorithm}}
 %        \resumeItemV{Member of Computer Vision Lab}
         \resumeItemListEnd
     \resumeSubheading
-      {Vishwakarma Institute of Technology}{Pune, India}
-      {Bachelor of Technology in Computer Engineering; GPA: 9.27$/$10}{Aug 2011 - May 2015}
+      {\href{http://vit.edu/}{Vishwakarma Institute of Technology}}{Pune, India}
+      {Bachelor of Technology in Computer Engineering}{Aug 2011 - May 2015}
   \resumeSubHeadingListEnd
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-  %  \resumeSubItem{\href{https://github.com/bhushan23/Light-Estimation/}{Face Illumination estimation}}
+  
+\section{Other Experience}
+\resumeItemListStart
+\resumeSubItem{OSS Contributions}{PyTorch: Worked on ATen, autograd, torch functions;}
+\resumeSubItem{Teaching Assistant}{Graduate course \textbf{Intro to Computer Vision} at Stony Brook University [Spring 2019]}
+\resumeSubItem{SUNY Research Foundation}{Implemented image parser for converting proprietary bio-medical image format into tiled-tiff format [C] [Feb 2018 - March 2018]}
+\resumeSubItem{{Vishwakarma Institute of Technology}} {Instructor of an undergraduate course [Jan 2017 - May 2017] \href{https://www.hackerrank.com/coding-puzzles/}{\textbf{Problem Solving and Programming}}}
+\resumeSubItem{Mentor at CalHacks 2019}{Mentored undergrad students during \href{https://calhacks.io/}{\textbf{\underline{CalHacks}}} hackathon at UC Berkeley}
+\resumeItemListEnd
 
-    \resumeSubItem{\href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{Co-Operative GANs}}{Auto-ML approach for GAN training- Train multiple generators and copy weights of best performing to other generators at the end of epoch. Solves mode collapsing, saddle point and local minima problem in training;\textbf{ \href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{\underline{Source \& Results}}}; [Python, PyTorch]}
-    \resumeSubItem{\href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{ADMM Optimizer in PyTorch}}{Implemented ADMM optimizer in PyTorch. Tested on Diabetes dataset; 1.6x faster than Scikit-Learn's state of the art Lasso and Ridge solver; \textbf{\href{https://github.com/bhushan23/ADMM/blob/master/REPORT_ADMM_IN_PYTORCH.pdf}{\underline{Report}}, \href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{\underline{Source}}, \href{https://github.com/bhushan23/ADMM}{\underline{Results}}}; [Python, PyTorch]}
+
+
+%-----------PROJECTS-----------------
+\section{Select Projects}
+  \resumeSubHeadingListStart
+  \resumeSubItem{Face Illumination Estimation}{GANs for domain adaptation. Used \href{https://drive.google.com/file/d/1RvyCiDMg--jyO8lLBvopp0o271LvREoa/view}{SIRFS} method for generating shading, albedo, normal and lighting for synthetic and CelebA dataset. Enhanced \href{https://jonbarron.info/}{Jon Barron's} \href{https://github.com/bhushan23/SIRFS}{SIRFS}; [Python, Matlab, PyTorch] \\\textbf{\href{https://github.com/bhushan23/Light-Estimation/blob/master/Lighting_Estimation_Report.pdf}{\underline{report}}, \href{https://github.com/bhushan23/Light-Estimation/}{\underline{source \& results}}};}
+  \resumeSubItem{Illumination model based on shading residue}{New illumination model based on shading residue to capture geometric imperfections in SfSNet; [PyTorch] \\\textbf{\href{https://github.com/bhushan23/Illumination-Estimation-With-Residue-Networks/blob/master/report/Lighting_Estimation_Report_v3.pdf}{\underline{report}}, \href{https://github.com/bhushan23/Illumination-Estimation-With-Residue-Networks}{\underline{source \& results}}}}
+   \resumeSubItem{\href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{Co-Operative GANs}}{Auto-ML approach for GAN training- Train multiple generators and copy weights of best performing to other generators at the end of each epoch; Weight sharing across generators helps learn the best representation; Solves mode collapsing, saddle point and local minima problem in training; [Python, PyTorch]\\ \href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{\textbf{\underline{source and results}}};}
+    \resumeSubItem{\href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{ADMM Optimizer in PyTorch}}{Implemented ADMM optimizer in PyTorch. Tested on Diabetes dataset; 1.6x faster than Scikit-Learn's state of the art Lasso and Ridge solver; [Python, PyTorch] \href{https://github.com/bhushan23/ADMM/}{\textbf{\underline{report, source \& results}}};}
 %    \resumeSubItem{\href{https://github.com/bhushan23/Computer-Vision}{Deep Learning for Computer Vision}}{Implemented CNNs for CIFAR-10 object recognition; \href{https://github.com/bhushan23/GAN/}{Implemented Auencoders and GANs for image generation}; [Python, PyTorch]}
-    \resumeSubItem{\href{https://github.com/bhushan23/SBU-ML-Assignment}{ML Algorithms}}{Implemented Ridge Regression, Lasso Solver, Support Vector Machine using Stochastic Gradient Descent and Quadratic Programming; Human Action recognition using CNN and RNN; \textbf{\href{https://github.com/bhushan23/SBU-ML-Assignment}{\underline{Source}}}; [Python, Matlab]}
-   % \resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Managing power supply of appliances for energy conservation}} {Home appliances consumes significant power in stand by mode; Internet of Things and Machine Learning solution; LSTM model for predicting appliances' usage pattern and control power supply accordingly. \textbf{Links:}\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{ Reports}, \href{https://github.com/bhushan23/SmartOff}{Source}; [Python, Scikit-learn, Keras]}
+    \resumeSubItem{\href{https://github.com/bhushan23/SBU-ML-Assignment}{ML Algorithms}}{Implemented Ridge Regression, Lasso Solver, Support Vector Machine using Stochastic Gradient Descent and Quadratic Programming; Human Action recognition using CNN and RNN; [Python, Matlab] \href{https://github.com/bhushan23/SBU-ML-Assignment}{\textbf{\underline{source}}};}
+    %\resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Managing power supply of appliances for energy conservation}} {Home appliances consumes significant power in stand by mode; Internet of Things and Machine Learning solution; LSTM model for predicting appliances' usage pattern and control power supply accordingly. \textbf{links:}\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{ report}, \href{https://github.com/bhushan23/SmartOff}{Source}; [Python, Scikit-learn, Keras]}
     %\resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Automate power supply of home appliances}} {IoT and ML solution; LSTM model for predicting appliances' usage pattern and predict when appliance will not be used and can be turned off. Used ESP8266 Microcontroller for communication. Client-Server model where Server devices using trained LSTM model sends signal to toggle power of respective device. \textbf{\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{\underline{Report}}, \href{https://github.com/bhushan23/SmartOff}{\underline{Source}}}; [Python, Scikit-learn, Keras]}
-    \resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Automate power supply of home appliances}} {LSTM model to predict when appliance will not be used and can be turned off. Client-Server model. \textbf{\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{\underline{Report}}, \href{https://github.com/bhushan23/SmartOff}{\underline{Source}}}; [Python, Scikit-learn, Keras]}
+    \resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Automate power supply of home appliances}} {LSTM model for predicting appliances' usage pattern and predict when appliance will not be used and can be turned off. Used ESP8266 Microcontroller for communication. Client-Server model where Server devices using trained LSTM model sends signal to toggle power of respective device; [Python, Scikit-learn, Keras] \href{https://github.com/bhushan23/SmartOff}{ \textbf{\underline{report and source}}};}
    % \resumeSubItem{Competitions}{Worked on \href{http://ai.bu.edu/visda-2018/}{Visual Domain Adaptation}, \href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018: AI for Prosthetics}}
     % \resumeSubItem{\href{http://urc.marssociety.org/home}{University Rover Challenge}}{Member of StonyBrook Mars Rover Challenge Computer Vision team; Working on to create depth map for avoiding large obstacles using ZED camera; [OpenCV, Python, OnGoing]}
     %\resumeSubItem{\href{https://github.com/bhushan23/pytorch-rl}{PyTorch-RL}}{Deep Reinforcement Learning algorithms implementation ready to be used for PyTorch [Python, PyTorch, OnGoing]}
     %\resumeSubItem{\href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018 AI for Prosthetics Challenge}}{Using Reinforcement learning to model human with a prosthetic leg to walk and run; [Python, Keras, PyTorch, Ongoing]}
-%    \resumeSubItem{MaskGAN with Attention model for filling the missing words}{Extending MaskGAN for filling the missing word with attention model for long sentences [Python, PyTorch, Ongoing]}
-    \resumeSubItem{Self Driving car in CARLA simulator}{Using behavioral cloning approach to train self driving car in CARLA simulator; Extending to driving in night using learning to see in dark; [Python, PyTorch, Ongoing]}
+    % \resumeSubItem{GAN I have your attention?}{Extending MaskGAN for filling the missing word with attention model for long sentences; [Python, PyTorch] \\ \href{https://github.com/bhushan23/Transformer-SeqGAN-PyTorch}{ \textbf{\underline{source}}}}
+    \resumeSubItem{Self Driving car along with Learning to see in dark}{Using behavioral cloning approach to train self driving car in CARLA simulator; Extending to driving in night using learning to see in dark; [Python, PyTorch] \href{https://github.com/bhushan23/Carla-Framework-CV-Project}{\textbf{\underline{source}}}}
    
-    %Using \href{https://github.com/keras-rl/keras-rl}{keras-rl} library; [Python, Keras, PyTorch, Ongoing]} 
-%    \resumeSubItem{\href{http://ai.bu.edu/visda-2018/}{Visual Domain Adaptation Challenge}}{Developing model to adapt between synthetic and real objects for detection; Developing a method of unsupervised domain adaptation for object classification with additional unknown categories; [Python, PyTorch, OnGoing]}
-    \resumeItemListEnd
-%\resumeSubItem{GroupPlay}
-%      {Synchronize all devices for audio playback over wifi. [Android, Java]}
-%      \resumeItem{Ani Malware Software}{Detecting malicious and %duplicate files using MD5 and SHA-256 algorithm; \\Used Avast %antivirus virus dataset. [Java]}
   \resumeSubHeadingListEnd
-
-%-----------Open Source--------------
-\section{Open-Source}
-\resumeSubHeadingListStart
-\resumeSubItem{\href{https://github.com/pytorch/pytorch}{PyTorch}}{\href{https://github.com/pytorch/pytorch/issues/9132}{torch.isInf, isFinite}; \href{https://github.com/pytorch/pytorch/issues/9546}{Negative indices with torch.narrow};\href{https://github.com/pytorch/pytorch/issues/12013}{NN layer empty batch};\href{https://docs.google.com/spreadsheets/d/1oFntDigXwlkAzJH_T6XagQD6ia-9H4YmqZMTWmPbz8w/edit?usp=sharing}{ \textbf{\underline{Status}}} [Python, C++]}
-%\resumeSubItem{\href{https://github.com/bhushan23/LogicalVision2}{Logical Vision}} {Polygon Detection; Implemented KNN using ml-pack. [Prolog, C++, Python, OpenCV]}
-\resumeItemListEnd
-
-
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-    %\resumeSubheadingTwo
-     % {Author - 'PyTorch Deep Learning Projects'}{Remote}
-     % {\href{https://www.packtpub.com/}{Packt Publications}}{Aug 2018 - Current}
-     % \resumeItemListStart
-     %   \resumeSubItem{Book}{Writing book for Students, Professionals and Researchers getting started in Deep Learning}
-     %   \resumeSubItem{Areas being covered}{Recommendation Systems, Computer Vision, Natural Language Processing, Reinforcement Learning, Generative Adversarial Networks, Self Driving Car}
-    % \resumeItemListEnd
-    \resumeSubheadingTwo
-      {Computer Vision Lab, Stony Brook University}{StonyBrook, NY}
-      {Master's Thesis}{Jan 2017 - Current}
-      \resumeItemListStart
-        \resumeSubItem{Face Illumination Estimation}{GANs for domain adaptation. Used \href{https://drive.google.com/file/d/1RvyCiDMg--jyO8lLBvopp0o271LvREoa/view}{SIRFS} method for generating shading, albedo, normal and lighting for synthetic and CelebA dataset. Enhanced \href{https://jonbarron.info/}{Jon Barron's} \href{https://github.com/bhushan23/SIRFS}{SIRFS \_fast implementation}; \textbf{\href{https://github.com/bhushan23/Light-Estimation/blob/master/Lighting_Estimation_Report.pdf}{\underline{Report}}, \href{https://github.com/bhushan23/Light-Estimation/}{\underline{Source \& Results}}}; [Python, Matlab, PyTorch]}
-        \resumeSubItem{Modeling Illumination in Neural Network}{Ongoing research; Target CVPR 2019}
-      \resumeItemListEnd
-    \resumeSubheadingTwo
-      {Nvidia}{Santa Clara, CA}
-      {Intern, SPIR-V Compiler}{May 2018 - Aug 2018}
-      \resumeItemListStart
-      \resumeItem{Confidential}{In the intersection of LLVM compiler and Machine Learning [C++, LLVM, Python]}
-      %  \resumeSubItem{Knobs Infrastructure} {Knobs infrastructure to allow compiler debugging and experimentation [C++, LLVM]}
-       % \resumeSubItem{Phase Dispatcher} {Compiler phase ordering and parameter tuning framework to enable compile time and run time performance exploration for compiler. [C++, LLVM]}
-      \resumeItemListEnd
-    \resumeSubheadingTwo
-      {Nvidia}{Pune, India}
-      {System Software Engineer, Optimizing Compiler}{Jun 2015 - Jul 2017}
-      \resumeItemListStart
-        \resumeSubItem{Optimizing compiler} {Nvidia Tegra graphics and CUDA compute compiler; Peephole optimizations; OpenGL/DX driver interfaces; Optimization for compile time improvements; Developed Profiling infrastructure; Worked on Tegra(Android, Nintendo) compiler issues; Worked on Coverity, GCov; [C/C++]}
-        \resumeSubItem{Assembler}{Implemented DWARF 2.0 compliant debug frame support for CUDA 9.0. [C]}
-      \resumeItemListEnd
-
-    \resumeSubheadingTwo
-      {Nvidia}{Pune, India}
-      {Intern, Optimizing Compiler}{Jun 2014 - Apr 2015}
-      \resumeItemListStart
-        \resumeSubItem{\href{http://slides.com/bhushansonawane/deck/}{PBQP based Register Allocator}}{Implemented Partitioned Boolean Quadratic Problem based register allocator for Nvidia compiler; 98\% of existing tests improved (graphics and compute tests); [C++]}
-      \resumeItemListEnd
-     \resumeSubheadingTwo
-      {Startup}{Pune, India}
-      {Technology and Management Role}{Jan 2014 - Mar 2015}
-      \resumeItemListStart
-      \resumeSubItem{\href{http://metromidnight.com/}{MetroMidnight}}{Food delivery startup,\textbf{\href{https://www.quodeit.com/}{ QuodeIT:}}{ Programming screening platform}}
-      \resumeItemListEnd
-      %\resumeSubItem{SUNY Research Foundation}{Image parser for converting proprietary bio-medical images into tiled-tiff [C]}
-    %  \resumeSubItem{{Vishwakarama Institute of Technology}} {Instructed undergraduate course     \href{https://www.hackerrank.com/coding-puzzles/}{'Problem Solving and Programming'}}
-      
-   \resumeSubHeadingListEnd
-
-
-
-%\section{Other Experience}
-%\resumeItemListStart
-%\resumeSubItem{SUNY Research Foundation}{Image parser for converting proprietary bio-medical images into tiled-tiff [C]}
-%\resumeSubItem{{Vishwakarama Institute of Technology}} {Instructed undergraduate course %\href{https://www.hackerrank.com/coding-puzzles/}{'Problem Solving and Programming'}}
-%\resumeItemListEnd
 
 %
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
     \item{
-      \textbf{}{C++, C, Python, Java, PyTorch, Keras, Tensorflow, LLVM, Django, Grails, Android}
+      \textbf{}{C++, C, Python, Java, Groovy, Prolog, PyTorch, Tensorflow, Keras, LLVM, Django, Grails, Android}
       \hfill
     }
   \resumeSubHeadingListEnd
-
-
 %
 %--------AWARDS------------
-\section{Awards}
+\section{Recognition}
 \resumeSubHeadingListStart
-    \resumeSubItem{Project rank 1/126}{PBQP based register allocator project secured first place at VIT(2015)}
-    \resumeSubItem{Paper Presentation rank 2/88}{Page Replacement algorithm using hashing at Papyrus, VIT(2014)}
-      \resumeSubItem{Completitions}{\textbf{Rank 2/66} in \href{https://www.kaggle.com/c/hw2-activity-recognition-cse512-spr18/leaderboard}{\underline{Kaggle Competition}} for Human Acticity Recognition(2018); \textbf{Rank 1/600} at programming contest(C-Athlon)(2014); Qualified for \textbf{ACM ICPC} Amritapuri regionals(2013)}
+    \resumeSubItem{Finalist of F8 Hackathon 2019}{Implemented Open-Curriculum: Platform for teachers across globe to share, manage and distribute educational content, lesson plans. Presented to Meta CEO Mark Zuckerberg. \href{https://devpost.com/software/opencurriculum-by-wattba}{\textbf{\underline{check project}}}}
+    \resumeSubItem{Judge at GenAI hackathon}{Judged GenAI and FinTech projects at \href{https://lu.ma/genlab3}{GenLab hackathon};}
+    \resumeSubItem{Shout-out \href{https://twitter.com/julien_c/status/1181629761761755137}{\underline{tweet}} from \href{https://huggingface.co}{huggingface}}{DistilGPT-2 conversion via onnx-coreml (2019)}
+    % \resumeSubItem{Best Systems project}{PBQP based register allocator project was acknowledged at VIT, Pune (2015)}
+    % \resumeSubItem{Paper Presentation first runner up}{Page Replacement algorithm using hashing at Papyrus, VIT(2014)}
+      \resumeSubItem{Competitions}{\textbf{Rank 2/66} in \href{https://www.kaggle.com/c/hw2-activity-recognition-cse512-spr18/leaderboard}{\underline{Kaggle Competition}} for Human Activity Recognition (2018); \textbf{Rank 1/600} at programming contest (C-Athlon) (2014); Qualified for \textbf{ACM ICPC} Amritapuri regionals (2013)}
    \resumeSubHeadingListEnd
-%-------------------------------------------
+   
+%--------Talks------------
+\section{Talks}
+\resumeSubHeadingListStart
+    \resumeSubItem{On-device AI Use Cases}{\href{https://youtu.be/xWFb4UqcLos?list=PLMsoJacBGVm9x645OnK00bEOlI8DE48Ev&t=856}{SF AI Engineer Meetup (2025)}}
+    \resumeSubItem{Optimize, Validate and Deploy Models On-device}{\href{https://www.youtube.com/watch?v=F_sdswYSjoM}{DroidCon London (2024)}}
+    \resumeSubItem{Building AI-Powered Applications}{On-device AI apps \href{https://lu.ma/vizhe6w2}{MLOps Community}}
+    \resumeSubItem{Deploying ML on Edge Devices}{Enabling on-device vision use cases with Qualcomm AI Hub \href{https://voxel51.com/blog/recapping-the-ai-machine-learning-and-computer-meetup-november-14-2024}{Voxel51 (2024)}}
+    \resumeSubItem{Running ONNX Models On-device}{\href{https://www.youtube.com/watch?v=mVSLkN5Vec0&list=PLNqLlwTfo321Fk5SuWmWhjtTVAgdAYxH6&index=16}{ONNX Community Meetup (2025)}}
+    \resumeSubItem{Qualcomm AI Hub Deep-Dive}{3-hour workshop on on-device AI model deployment \href{https://embeddedvisionsummit.com/2024-deep-dive-session-qualcomm/}{EVS (2024)}}
 
+   \resumeSubHeadingListEnd
 \end{document}
-
