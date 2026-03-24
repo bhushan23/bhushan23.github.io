@@ -90,38 +90,34 @@
       {Qualcomm}{Santa Clara, CA}
       {Senior Engineering Manager, ML Platform}{Nov 2023 - Present}
       \resumeItemListStart
-      \resumeSubItem{Quantization Tools}{Leading state-of-the-art quantization tool \href{https://github.com/quic/aimet}{AIMET} based on PyTorch and ONNX; Advanced quantization techniques for LLMs; Developer tools to quantize models with ease}
-      \resumeSubItem{LLM Quantization}{Shipping \href{https://quic.github.io/aimet-pages/releases/latest/tutorials/quantization_recipe.html}{LLM quantization recipes} using aimet-torch and aimet-onnx; End-to-end workflow to quantize LLMs and deploy on Snapdragon platform via \href{https://aihub.qualcomm.com/}{AI Hub Models} and \href{https://workbench.aihub.qualcomm.com/docs/}{Workbench}}
-      \resumeSubItem{Integrations}{Expanded \href{https://microsoft.github.io/Olive/features/quantization.html#quantize-with-ai-model-efficiency-toolkit}{Microsoft Olive} capabilities with AIMET integration; Making tools accessible to developers worldwide via \href{https://aihub.qualcomm.com/}{AI Hub Workbench}}
-      \resumeSubItem{Downstream Toolchain}{Cross-functional collaboration on new quantizer spec bridging off-target to on-target accuracy gaps; Enhanced developer productivity for model accuracy debugging; Reduced release-to-release regressions in \href{https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk}{QAIRT}}
-      \resumeSubItem{Developer Workflow}{Streamlined workflow using aimet-torch for QAT and aimet-onnx for PTQ; Simplified APIs and tools for faster model on-boarding}
-      \resumeSubItem{Performance}{Optimized latency and reduced memory footprint for GenAI with graph optimizations and traversals; Making onnx-ir a core component to simplify development and improve memory utilization of aimet-onnx;}
-      \resumeSubItem{Customer Success}{Trained CEs and customers on automated self-serve workflows; Reduced escalations and accelerated model on-boarding; Created debugging workflows for rapid iteration;}
-      \resumeSubItem{\href{https://github.com/quic/ai-hub-apps}{AI Hub Apps}}{Developed sample apps for Android and edge devices enabling developers to deploy models on-device}
+      \resumeSubItem{Leadership}{Inherited and restructured team with 50\% reduced headcount; improved product quality and team productivity through culture change, streamlined developer workflows, and focus on deliverables}
+      \resumeSubItem{\href{https://github.com/quic/aimet}{AIMET} Quantization}{Lead engineering for Qualcomm's flagship quantization toolkit; shipped advanced LLM quantization techniques enabling on-device GenAI across Snapdragon via \href{https://aihub.qualcomm.com/}{AI Hub} and \href{https://workbench.aihub.qualcomm.com/docs/}{Workbench}}
+      \resumeSubItem{LLM Deployment}{Delivered end-to-end \href{https://quic.github.io/aimet-pages/releases/latest/tutorials/quantization_recipe.html}{quantization recipes} for LLMs on Snapdragon; integrated AIMET into \href{https://microsoft.github.io/Olive/features/quantization.html#quantize-with-ai-model-efficiency-toolkit}{Microsoft Olive}, expanding developer reach globally}
+      \resumeSubItem{Performance}{Reduced GenAI memory footprint and latency via graph optimizations; made onnx-ir a core component of aimet-onnx, improving memory utilization across the stack}
+      \resumeSubItem{Toolchain Quality}{Led cross-functional effort to close off-target vs. on-target accuracy gaps in \href{https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk}{QAIRT}; improved debugging productivity and reduced release-to-release regressions}
+      \resumeSubItem{Customer Success}{Trained field engineers and customers on self-serve quantization workflows; cut escalations and accelerated model onboarding cycle times}
+      \resumeSubItem{\href{https://github.com/quic/ai-hub-apps}{AI Hub Apps}}{Built sample Android and edge apps enabling developers to ship on-device AI models end-to-end}
     \resumeItemListEnd
     \resumeSubheading
       {Tetra AI}{Mountain View, CA}
       {Founding Machine Learning Engineer, ML Platform}{Aug 2022 - Nov 2023}
       \resumeItemListStart
-      \resumeSubItem{\href{https://aihub.qualcomm.com/}{AI Hub Models}}{Spearheaded development of first-of-its-kind ML model zoo for optimized on-device models; YAML-based spec capturing performance and accuracy metrics per release}
-      \resumeSubItem{Weight De-duplication}{Created model de-duplicator enabling weight sharing for compiled models; Achieved up to 32x model size reduction}
-      \resumeSubItem{Microsoft Teams}{Led AI use-cases: segmentation, audio, video codec; Optimized \href{https://github.com/bhushan23/DCVC}{DCVC model} for on-device deployment with graph optimizations for better NPU utilization}
-      \resumeSubItem{Graph Infrastructure}{Developed graph-to-graph transformation infrastructure on top of \href{https://github.com/apple/coremltools}{coremltools}}
-      \resumeSubItem{Platform Infrastructure}{Extended AI Hub to support new model formats; Introduced directory-based formats and ahead-of-time compiled model support}
-      \resumeSubItem{Team Impact}{Streamlined processes; mentored developers on graph optimizations; Drove features improving AI developer experience}
+      \resumeSubItem{\href{https://aihub.qualcomm.com/}{AI Hub Models}}{Spearheaded first-of-its-kind ML model zoo for optimized on-device models; built YAML-based spec tracking performance and accuracy metrics across releases}
+      \resumeSubItem{Weight De-duplication}{Invented model de-duplicator enabling weight sharing for compiled models; achieved up to \textbf{32x model size reduction}}
+      \resumeSubItem{Microsoft Teams}{Led on-device AI features (segmentation, audio, video codec); optimized \href{https://github.com/bhushan23/DCVC}{DCVC model} via graph transformations for improved NPU utilization}
+      \resumeSubItem{Platform Infrastructure}{Extended AI Hub to support new model formats including directory-based and ahead-of-time compiled models; built graph-to-graph transformation infrastructure on \href{https://github.com/apple/coremltools}{coremltools}}
     \resumeItemListEnd
     \resumeSubheading
       {Apple}{Cupertino, CA}
       {Senior Machine Learning Engineer, ML Platform}{June 2019 - Aug 2022}
       \resumeItemListStart
-      \resumeSubItem{\href{https://coremltools.readme.io/docs/model-intermediate-language}{MIL}}{Designed intermediate programming language that unifies ML model conversion, serialization, and optimization; Key representation format for GenAI on-boarding via CoreML; Introduced Composite Operators to enable developers build on top of MIL; [C++, Python, Objective-C]}
-      \resumeSubItem{Weight File Format}{Created unified weight file format shared across stack; Minimized compile-time memory footprint; Enabled LLM conversion and deployment on CoreML;}
-      \resumeSubItem{Performance}{Fixed and optimized CPU kernels; Implemented graph transformations for model efficiency}
-      \resumeSubItem{Auto-upgrade Tool}{Led development of model format migration tool; Created migration guidebook; On-boarded multiple internal teams to MIL}
-      \resumeSubItem{Cross-functional Impact}{Collaborated across teams to improve end-to-end stack; Enabled Stable Diffusion and GenAI models on-device}
-      \resumeSubItem{\href{https://github.com/onnx/onnx-coreml}{ONNX-CoreML Converter}}{Led converter for deploying ONNX models to iOS; Implemented neural network layer conversions for CoreML 3.0 [Python]}
-      \resumeSubItem{\href{https://github.com/apple/coremltools/}{CoreML Tools}}{Implemented optimization passes, image input support, custom layers; Updated builder API for CoreML 3.0 spec [Python, Objective-C]}
-      \resumeSubItem{Developer Enablement}{Enabled first-party and third-party developers to deploy models on CoreML; Drove community engagement for coremltools}
+      \resumeSubItem{\href{https://coremltools.readme.io/docs/model-intermediate-language}{MIL}}{Designed intermediate language unifying ML model conversion, serialization, and optimization across CoreML; became the key representation for on-device GenAI including Stable Diffusion [C++, Python, Objective-C]}
+      \resumeSubItem{Weight File Format}{Created unified weight file format shared across stack; minimized compile-time memory footprint; enabled LLM conversion and deployment on CoreML}
+      \resumeSubItem{ML Runtime}{Optimized CPU kernels and implemented graph transformations for model efficiency; reduced inference latency across vision and NLP models}
+      \resumeSubItem{Auto-upgrade Tool}{Led development of model format migration tool; created migration guidebook; on-boarded multiple internal teams to MIL}
+      \resumeSubItem{\href{https://github.com/onnx/onnx-coreml}{ONNX-CoreML Converter}}{Lead ONNX-to-CoreML converter enabling model deployment to iOS; implemented neural network layer conversions for CoreML 3.0 [Python]}
+      \resumeSubItem{\href{https://github.com/apple/coremltools/}{CoreML Tools}}{Implemented optimization passes, image input support, and custom layers; introduced Composite Operators enabling developers to build custom operations on MIL; updated builder API for CoreML 3.0 spec [Python, Objective-C]}
+      \resumeSubItem{Developer Enablement}{Enabled first-party and third-party developers to deploy models on CoreML; drove community engagement and OSS contributions for coremltools}
      \resumeItemListEnd
     \resumeSubheading
       {Nvidia}{Santa Clara, CA}
@@ -132,35 +128,23 @@
       \resumeItemListEnd
     \resumeSubheading
       {Nvidia}{Pune, India}
-      {System Software Engineer, Compiler}{Jun 2015 - Jul 2017}
+      {System Software Engineer, Compiler (Intern $\rightarrow$ Full-time)}{Jun 2014 - Jul 2017}
       \resumeItemListStart
-        \resumeItem{Profiling Infrastructure}
-          {Collaborated with OpenGL driver and GLSL front-end teams to build compile-time and memory usage profiling [C++]}
+        \resumeItem{\href{http://slides.com/bhushansonawane/deck/}{PBQP Register Allocator}}
+          {Implemented PBQP-based register allocator; Improved 98\% of graphics and compute use cases [C++]}
         \resumeItem{Early Copy Propagation}
           {Optimized phase ordering reducing instructions processed; Cut compile time from hours to minutes for specialized shaders [C++]}
         \resumeItem{Assembler}
           {Implemented DWARF 2.0 debug frame support for CUDA 9.0; Added vendor extensions for DWARF 3.0 compatibility [C]}
-        \resumeItem{Optimizations}
-          {Enhanced peephole optimizations, interfaces, and heuristics for Tegra Graphics and CUDA [C++]}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Nvidia}{Pune, India}
-      {Intern, Compiler}{Jun 2014 - Apr 2015}
-      \resumeItemListStart
-        \resumeItem{\href{http://slides.com/bhushansonawane/deck/}{PBQP Register Allocator}}
-          {Implemented PBQP-based register allocator for Nvidia compiler; Improved 98\% of graphics and compute use cases [C++]}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
 \section{Community \& Teaching}
 \resumeSubHeadingListStart
-\resumeSubItem{OSS Contributions}{PyTorch: Worked on ATen, autograd, torch functions;}
-\resumeSubItem{SUNY Research Foundation}{Implemented image parser for converting proprietary bio-medical image format into tiled-tiff format [C] [Feb 2018 - Mar 2018]}
-\resumeSubItem{Mentor at CalHacks}{Mentored undergrad students during \href{https://calhacks.io/}{CalHacks} hackathon at UC Berkeley [2019] }
+\resumeSubItem{OSS Contributions}{PyTorch: Worked on ATen, autograd, torch functions}
+\resumeSubItem{Mentor at CalHacks}{Mentored undergrad students during \href{https://calhacks.io/}{CalHacks} hackathon at UC Berkeley [2019]}
 \resumeSubItem{Teaching Assistant}{Graduate course \textit{Intro to Computer Vision} at Stony Brook University [Spring 2019]}
-\resumeSubItem{Industry Faculty}{Instructed undergraduate course \href{https://www.hackerrank.com/coding-puzzles/}{Problem Solving and Programming} [Spring 2017]}
 
 \resumeSubHeadingListEnd
 
@@ -183,45 +167,16 @@
 
 
 
-%-----------PROJECTS-----------------
-\section{Select Projects}
-  \resumeSubHeadingListStart
-  \resumeSubItem{Face Illumination Estimation}{GANs for domain adaptation. Used \href{https://drive.google.com/file/d/1RvyCiDMg--jyO8lLBvopp0o271LvREoa/view}{SIRFS} method for generating shading, albedo, normal and lighting for synthetic and CelebA dataset. Enhanced \href{https://jonbarron.info/}{Jon Barron's} \href{https://github.com/bhushan23/SIRFS}{SIRFS}; [Python, Matlab, PyTorch] \\\textbf{\href{https://github.com/bhushan23/Light-Estimation/blob/master/Lighting_Estimation_Report.pdf}{\underline{report}}, \href{https://github.com/bhushan23/Light-Estimation/}{\underline{source \& results}}};}
-  \resumeSubItem{Illumination model based on shading residue}{New illumination model based on shading residue to capture geometric imperfections in SfSNet; [PyTorch] \\\textbf{\href{https://github.com/bhushan23/Illumination-Estimation-With-Residue-Networks/blob/master/report/Lighting_Estimation_Report_v3.pdf}{\underline{report}}, \href{https://github.com/bhushan23/Illumination-Estimation-With-Residue-Networks}{\underline{source \& results}}}}
-   \resumeSubItem{Co-Operative GANs}{Auto-ML approach for GAN training: train multiple generators and copy weights of best performing to other generators at the end of each epoch; Weight sharing across generators helps learn the best representation; Solves mode collapsing, saddle point and local minima problem in training; [Python, PyTorch]\\ \href{https://github.com/bhushan23/GAN/tree/master/Co-Operative-GAN}{\textbf{\underline{source and results}}};}
-    \resumeSubItem{\href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{ADMM Optimizer in PyTorch}}{Implemented ADMM optimizer in PyTorch. Tested on Diabetes dataset; 1.6x faster than Scikit-Learn's state of the art Lasso and Ridge solver; [Python, PyTorch] \href{https://github.com/bhushan23/ADMM/}{\textbf{\underline{report, source \& results}}};}
-%    \resumeSubItem{\href{https://github.com/bhushan23/Computer-Vision}{Deep Learning for Computer Vision}}{Implemented CNNs for CIFAR-10 object recognition; \href{https://github.com/bhushan23/GAN/}{Implemented Auencoders and GANs for image generation}; [Python, PyTorch]}
-    % \resumeSubItem{\href{https://github.com/bhushan23/SBU-ML-Assignment}{ML Algorithms}}{Implemented Ridge Regression, Lasso Solver, Support Vector Machine using Stochastic Gradient Descent and Quadratic Programming; Human Action recognition using CNN and RNN; [Python, Matlab] \href{https://github.com/bhushan23/SBU-ML-Assignment}{\textbf{\underline{source}}};}
-    %\resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Managing power supply of appliances for energy conservation}} {Home appliances consumes significant power in stand by mode; Internet of Things and Machine Learning solution; LSTM model for predicting appliances' usage pattern and control power supply accordingly. \textbf{links:}\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{ report}, \href{https://github.com/bhushan23/SmartOff}{Source}; [Python, Scikit-learn, Keras]}
-    %\resumeSubItem{\href{https://github.com/bhushan23/SmartOff}{SmartOFF - Automate power supply of home appliances}} {IoT and ML solution; LSTM model for predicting appliances' usage pattern and predict when appliance will not be used and can be turned off. Used ESP8266 Microcontroller for communication. Client-Server model where Server devices using trained LSTM model sends signal to toggle power of respective device. \textbf{\href{https://github.com/bhushan23/SmartOff/tree/master/Reports}{\underline{Report}}, \href{https://github.com/bhushan23/SmartOff}{\underline{Source}}}; [Python, Scikit-learn, Keras]}
-    \resumeSubItem{SmartOFF - Automate Power Supply of Home Appliances}{LSTM model predicting appliance usage patterns to automatically turn off idle devices; ESP8266 microcontroller for communication; Client-server architecture where server sends toggle signals based on trained model; [Python, Scikit-learn, Keras] \href{https://github.com/bhushan23/SmartOff}{ \textbf{\underline{report and source}}};}
-   % \resumeSubItem{Competitions}{Worked on \href{http://ai.bu.edu/visda-2018/}{Visual Domain Adaptation}, \href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018: AI for Prosthetics}}
-    % \resumeSubItem{\href{http://urc.marssociety.org/home}{University Rover Challenge}}{Member of StonyBrook Mars Rover Challenge Computer Vision team; Working on to create depth map for avoiding large obstacles using ZED camera; [OpenCV, Python, OnGoing]}
-    %\resumeSubItem{\href{https://github.com/bhushan23/pytorch-rl}{PyTorch-RL}}{Deep Reinforcement Learning algorithms implementation ready to be used for PyTorch [Python, PyTorch, OnGoing]}
-    %\resumeSubItem{\href{https://www.crowdai.org/challenges/nips-2018-ai-for-prosthetics-challenge}{NIPS 2018 AI for Prosthetics Challenge}}{Using Reinforcement learning to model human with a prosthetic leg to walk and run; [Python, Keras, PyTorch, Ongoing]}
-    % \resumeSubItem{GAN I have your attention?}{Extending MaskGAN for filling the missing word with attention model for long sentences; [Python, PyTorch] \\ \href{https://github.com/bhushan23/Transformer-SeqGAN-PyTorch}{ \textbf{\underline{source}}}}
-    \resumeSubItem{Self-Driving Car in Low Light}{Behavioral cloning to train self-driving car in CARLA simulator; Extended to night driving using learning to see in the dark; [Python, PyTorch] \href{https://github.com/bhushan23/Carla-Framework-CV-Project}{\textbf{\underline{source}}}}
-   
-  \resumeSubHeadingListEnd
-
-%
-%--------PROGRAMMING SKILLS------------
+%-----------SKILLS-----------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \item{
-      {C++, C, Python, Java, Groovy, Prolog, PyTorch, Tensorflow, Keras, LLVM, Django, Grails, Android}
-      \hfill
+    \item\small{
+      \textbf{Languages:} C++, C, Python, Java \hfill
+      \textbf{ML Frameworks:} PyTorch, TensorFlow, Keras, ONNX \\
+      \textbf{Compilers \& IR:} LLVM, SPIR-V, MIL, onnx-ir \hfill
+      \textbf{Tools \& Platforms:} CoreML, AIMET, Android, AI Hub
     }
   \resumeSubHeadingListEnd
-%
-%--------AWARDS------------
-\section{Recognition}
-\resumeSubHeadingListStart
-    \resumeSubItem{Finalist of F8 Hackathon 2019}{Implemented Open-Curriculum: Platform for teachers across globe to share, manage and distribute educational content, lesson plans. Presented to Meta CEO Mark Zuckerberg. \href{https://devpost.com/software/opencurriculum-by-wattba}{\textbf{\underline{check project}}}}
-    \resumeSubItem{Judge at GenAI hackathon}{Judged GenAI and FinTech projects at \href{https://lu.ma/genlab3}{GenLab hackathon};}
-    \resumeSubItem{Shout-out \href{https://twitter.com/julien_c/status/1181629761761755137}{\underline{tweet}} from \href{https://huggingface.co}{huggingface}}{DistilGPT-2 conversion via onnx-coreml (2019)}
-   \resumeSubHeadingListEnd
-   
 %--------Talks------------
 \section{Talks}
 \resumeSubHeadingListStart
@@ -231,6 +186,22 @@
     \resumeSubItem{Deploying ML on Edge Devices}{Enabling on-device vision use cases with Qualcomm AI Hub \href{https://voxel51.com/blog/recapping-the-ai-machine-learning-and-computer-meetup-november-14-2024}{Voxel51 (2024)}}
     \resumeSubItem{Running ONNX Models On-device}{\href{https://www.youtube.com/watch?v=mVSLkN5Vec0&list=PLNqLlwTfo321Fk5SuWmWhjtTVAgdAYxH6&index=16}{ONNX Community Meetup (2025)}}
     \resumeSubItem{Qualcomm AI Hub Deep-Dive}{3-hour workshop on on-device AI model deployment \href{https://embeddedvisionsummit.com/2024-deep-dive-session-qualcomm/}{EVS (2024)}}
+\resumeSubHeadingListEnd
 
-   \resumeSubHeadingListEnd
+%--------AWARDS------------
+\section{Recognition}
+\resumeSubHeadingListStart
+    \resumeSubItem{Finalist of F8 Hackathon 2019}{Implemented Open-Curriculum: Platform for teachers across globe to share, manage and distribute educational content, lesson plans. Presented to Meta CEO \textbf{Mark Zuckerberg}. \href{https://devpost.com/software/opencurriculum-by-wattba}{\textbf{\underline{check project}}}}
+    \resumeSubItem{Judge at GenAI hackathon}{Judged GenAI and FinTech projects at \href{https://lu.ma/genlab3}{GenLab hackathon};}
+    \resumeSubItem{Shout-out \href{https://x.com/julien_c/status/1181629761761755137}{\underline{tweet}} from \href{https://huggingface.co}{huggingface}}{DistilGPT-2 conversion via onnx-coreml (2019)}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Select Projects}
+  \resumeSubHeadingListStart
+  \resumeSubItem{Face Illumination Estimation}{GANs for domain adaptation using \href{https://drive.google.com/file/d/1RvyCiDMg--jyO8lLBvopp0o271LvREoa/view}{SIRFS} for shading, albedo, normal and lighting estimation; [Python, PyTorch] \textbf{\href{https://github.com/bhushan23/Light-Estimation/}{\underline{source}}}}
+    \resumeSubItem{\href{https://github.com/bhushan23/pytorch/blob/1303c014dc3580654173c43fc6cf3409e4ef0438/torch/optim/admm.py}{ADMM Optimizer in PyTorch}}{Implemented ADMM optimizer; 1.6x faster than Scikit-Learn's Lasso and Ridge solver; [Python, PyTorch] \href{https://github.com/bhushan23/ADMM/}{\textbf{\underline{source}}}}
+    \resumeSubItem{Self-Driving Car in Low Light}{Behavioral cloning for self-driving in CARLA simulator; Extended to night driving; [Python, PyTorch] \href{https://github.com/bhushan23/Carla-Framework-CV-Project}{\textbf{\underline{source}}}}
+  \resumeSubHeadingListEnd
+
 \end{document}
