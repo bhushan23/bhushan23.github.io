@@ -397,35 +397,58 @@ a:hover {
 }
 
 /* Talks */
-.talks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.talk-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.talk-card {
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 16px 20px;
+  border-radius: 10px;
+  overflow: hidden;
   transition: all 0.2s;
 }
 
-.talk-item:hover {
+.talk-card:hover {
   border-color: #a5b4fc;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+.talk-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.talk-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+}
+
+.talk-info {
+  padding: 12px 14px;
 }
 
 .talk-title {
+  display: block;
   font-weight: 500;
   color: #1a1a2e;
-  font-size: 0.95em;
+  font-size: 0.85em;
+  margin-bottom: 4px;
 }
 
 .talk-venue {
-  font-size: 0.8em;
+  display: block;
+  font-size: 0.75em;
   color: #94a3b8;
   font-family: 'IBM Plex Mono', monospace;
 }
@@ -598,15 +621,17 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .talk-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+  .talks-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
   .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .talks-grid {
     grid-template-columns: 1fr;
   }
 
