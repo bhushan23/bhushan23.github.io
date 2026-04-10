@@ -189,6 +189,7 @@ a:hover {
   border: 1px solid #e2e8f0;
   padding: 12px;
   position: relative;
+  transition: all 0.3s ease;
 }
 
 .stack-layer::before {
@@ -204,6 +205,29 @@ a:hover {
 
 .stack-layer:last-child::before {
   display: none;
+}
+
+.stack-layer.highlighted {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  border-color: #a5b4fc;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+  transform: scale(1.02);
+}
+
+.stack-layer.highlighted .stack-label {
+  color: #4f46e5;
+}
+
+/* Stack triggers in summary */
+.stack-trigger {
+  cursor: pointer;
+  border-bottom: 1px dashed #c7d2fe;
+  transition: all 0.2s;
+}
+
+.stack-trigger:hover {
+  color: #6366f1;
+  border-bottom-color: #6366f1;
 }
 
 .stack-label {
