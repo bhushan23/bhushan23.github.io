@@ -1,58 +1,42 @@
 %-------------------------
-% Resume in Latex
-% Author : Sourabh Bajaj
-% License : MIT
+% One-liner Resume - Condensed Version
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
-\usepackage{graphicx}
-\graphicspath{ {images/} }
+\documentclass[letterpaper,10pt]{article}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.475in}
-\addtolength{\evensidemargin}{-0.475in}
+% Tighter margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeItemV}[2]{
-  \item\small{
-    \textbf{#1}{#2 \vspace{-2pt}}
   }
 }
 
@@ -73,121 +57,115 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://bhushansonawane.com/}{\Large Bhushan B. Sonawane}} & \href{mailto:bhushansonawane94@gmail.com}{bhushansonawane94@gmail.com}\\
-  \href{http://bhushansonawane.com/}{bhushansonawane.com} & +1-631-590-9644 \\
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}c@{\extracolsep{\fill}}r}
+  \href{http://bhushansonawane.com/}{bhushansonawane.com} & \textbf{\Large Bhushan Sonawane} & \href{mailto:bhushansonawane94@gmail.com}{bhushansonawane94@gmail.com}
 \end{tabular*}
 
-\vspace{4pt}
-\textit{10+ years across the full ML stack: building apps, ML infrastructure, runtime and compilers}
-\vspace{-8pt}
+\vspace{2pt}
+\begin{center}
+\textit{\small 10+ years building ML infrastructure end-to-end: compilers, runtime, converters, and apps}
+\end{center}
+\vspace{-6pt}
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
     \resumeSubheading
       {Qualcomm}{Santa Clara, CA}
       {Senior Engineering Manager, ML Platform}{Nov 2023 - Present}
       \resumeItemListStart
-      \resumeSubItem{\href{https://github.com/quic/aimet}{AIMET} Quantization}{Leading engineering for Qualcomm's flagship quantization toolkit; shipping advanced LLM quantization techniques enabling on-device GenAI across Snapdragon via \href{https://aihub.qualcomm.com/}{AI Hub} and \href{https://workbench.aihub.qualcomm.com/docs/}{Workbench}}
-      \resumeSubItem{LLM Deployment}{Delivered end-to-end \href{https://quic.github.io/aimet-pages/releases/latest/tutorials/quantization_recipe.html}{quantization recipes} for LLMs on Snapdragon; integrated AIMET into \href{https://microsoft.github.io/Olive/features/quantization.html\#quantize-with-ai-model-efficiency-toolkit}{Microsoft Olive}, expanding developer reach globally}
-      \resumeSubItem{Developer Experience}{Leading cross-team collaboration to improve model accuracy between development and on-device deployment: ONNX QNN EP, compiler and runtime stack}
-      \resumeSubItem{Performance}{Reduced GenAI memory footprint and latency via graph optimizations; made onnx-ir a core component of aimet-onnx}
-      \resumeSubItem{Customer Success}{Trained solutions engineers and customers on self-serve quantization workflows; built \href{https://github.com/quic/ai-hub-apps}{AI Hub Apps} for end-to-end on-device AI deployment}
-    \resumeItemListEnd
+        \resumeSubItem{\href{https://github.com/quic/aimet}{AIMET}}{Leading quantization toolkit; shipping LLM quantization for on-device GenAI via \href{https://aihub.qualcomm.com/}{AI Hub}}
+        \resumeSubItem{Integration}{Integrated AIMET into \href{https://microsoft.github.io/Olive/}{Microsoft Olive}; leading cross-team work on ONNX QNN EP and compiler stack}
+        \resumeSubItem{Performance}{Reduced GenAI memory footprint and latency via graph optimizations}
+        \resumeSubItem{GenAI Onboarding}{Simplifying end-to-end flow from quantization to deployment via AI Hub for Snapdragon}
+        \resumeSubItem{Customer Success}{Trained solutions engineers and customers on self-serve quantization workflows}
+      \resumeItemListEnd
     \resumeSubheading
       {Tetra AI (acquired by Qualcomm)}{Mountain View, CA}
       {Founding Machine Learning Engineer}{Aug 2022 - Nov 2023}
       \resumeItemListStart
-      \resumeSubItem{\href{https://aihub.qualcomm.com/}{AI Hub}}{Spearheaded first-of-its-kind ML model zoo for optimized on-device models; invented weight de-duplicator achieving \textbf{32x model size reduction}}
-      \resumeSubItem{Microsoft Teams}{Led on-device AI features (segmentation, audio, video codec); optimized \href{https://github.com/bhushan23/DCVC}{DCVC model} via graph transformations for improved NPU utilization}
-      \resumeSubItem{Graph Simplification}{Built graph-to-graph transformation infrastructure on \href{https://github.com/apple/coremltools}{coremltools}; extended AI Hub to support new model formats}
-    \resumeItemListEnd
+        \resumeSubItem{\href{https://aihub.qualcomm.com/}{AI Hub}}{Built first on-device model zoo; invented weight de-duplication achieving 32x model size reduction}
+        \resumeSubItem{Microsoft Teams}{Led on-device AI features; built graph simplification infrastructure on coremltools}
+        \resumeSubItem{Platform}{Launched SaaS platform for model optimization and deployment}
+      \resumeItemListEnd
     \resumeSubheading
       {Apple}{Cupertino, CA}
       {Senior Machine Learning Engineer, ML Platform}{June 2019 - Aug 2022}
       \resumeItemListStart
-      \resumeSubItem{\href{https://coremltools.readme.io/docs/model-intermediate-language}{MIL}}{Designed Model Intermediate Language unifying ML model conversion, serialization, and optimization across CoreML; became the key representation for on-device GenAI including Stable Diffusion [C++, Python, Objective-C]}
-      \resumeSubItem{Weight File Format}{Created unified weight file format shared across stack; minimized compile-time memory footprint; enabled LLM conversion and deployment on CoreML}
-      \resumeSubItem{ML Runtime}{Optimized CPU kernels and implemented graph transformations for model efficiency; reduced inference latency across vision and NLP models}
-      \resumeSubItem{Auto-upgrade Tool}{Led development of model format migration tool; created migration guidebook; on-boarded multiple internal teams including Vision Pro}
-      \resumeSubItem{\href{https://github.com/onnx/onnx-coreml}{ONNX-CoreML Converter}}{Led ONNX-to-CoreML converter enabling model deployment to iOS; implemented neural network layer conversions for CoreML 3.0}
-      \resumeSubItem{\href{https://github.com/apple/coremltools/}{CoreML Tools}}{Implemented optimization passes, custom layers, and Composite Operators enabling developers to build custom operations on MIL; drove OSS community engagement}
-     \resumeItemListEnd
+        \resumeSubItem{\href{https://coremltools.readme.io/docs/model-intermediate-language}{MIL}}{Designed Model Intermediate Language - core representation for CoreML and on-device GenAI (Stable Diffusion)}
+        \resumeSubItem{Converters}{Led \href{https://github.com/onnx/onnx-coreml}{ONNX-CoreML} converter and \href{https://github.com/apple/coremltools}{CoreML Tools}; ML runtime CPU kernel optimizations}
+        \resumeSubItem{Runtime}{Created unified weight file format enabling LLM deployment; led auto-upgrade tool for Vision Pro}
+        \resumeSubItem{OSS}{Drove community engagement; enabled first-party and third-party developers to deploy models on CoreML}
+      \resumeItemListEnd
     \resumeSubheading
       {Nvidia}{Santa Clara, CA}
       {Intern, SPIR-V Compiler}{May 2018 - Aug 2018}
       \resumeItemListStart
-      \resumeSubItem{Compiler Optimization Controller}{Developed infrastructure for controlling optimization phase ordering and parameter tuning [C++, LLVM, Python]}
+        \resumeSubItem{Compiler}{Developed optimization controller for phase ordering and parameter tuning; profiling tool for analysis}
       \resumeItemListEnd
     \resumeSubheading
       {Nvidia}{Pune, India}
-      {System Software Engineer, Compiler (Intern $\rightarrow$ Full-time)}{Jun 2014 - Jul 2017}
+      {System Software Engineer, Compiler}{Jun 2014 - Jul 2017}
       \resumeItemListStart
-        \resumeItem{GPU Code Generation}{Peephole optimizations, scheduler, and register allocator for NVIDIA GPUs; optimized CUDA workloads and specialized shaders (Nintendo Switch) [C++]}
-        \resumeItem{\href{http://slides.com/bhushansonawane/deck/}{Register Allocator}}{PBQP-based implementation reducing register pressure in 98\% of workloads, improving GPU occupancy [C++]}
-        \resumeItem{Tooling}{Built profiling tools for compiler analysis; implemented DWARF 2.0 debug frame support for CUDA 9.0 [C, C++]}
+        \resumeSubItem{GPU Code Gen}{Peephole optimizations, scheduler, and register allocator for NVIDIA GPUs; optimized CUDA workloads and specialized shaders (Nintendo Switch) [C++]}
+        \resumeSubItem{Register Allocator}{PBQP-based implementation reducing register pressure in 98\% of workloads, improving GPU occupancy [C++]}
+        \resumeSubItem{Tooling}{Built profiling tools for compiler analysis; DWARF debug frame support for CUDA 9.0}
       \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%--------Talks------------
+%-----------TALKS-----------------
 \section{Talks}
-\resumeSubHeadingListStart
-    \resumeSubItem{On-device AI Use Cases}{\href{https://youtu.be/xWFb4UqcLos?list=PLMsoJacBGVm9x645OnK00bEOlI8DE48Ev&t=856}{SF AI Engineer Meetup (2025)}}
-    \resumeSubItem{Running ONNX Models On-device}{\href{https://www.youtube.com/watch?v=mVSLkN5Vec0&list=PLNqLlwTfo321Fk5SuWmWhjtTVAgdAYxH6&index=16}{ONNX Community Meetup (2025)}}
-    \resumeSubItem{Optimize, Validate and Deploy Models On-device}{\href{https://www.youtube.com/watch?v=F_sdswYSjoM}{DroidCon London (2024)}}
-    \resumeSubItem{Deploying ML on Edge Devices}{\href{https://voxel51.com/blog/recapping-the-ai-machine-learning-and-computer-meetup-november-14-2024}{Voxel51 Meetup (2024)}}
-    \resumeSubItem{Qualcomm AI Hub Deep-Dive}{3-hour workshop on on-device AI model deployment \href{https://embeddedvisionsummit.com/2024-deep-dive-session-qualcomm/}{EVS (2024)}}
-    \resumeSubItem{Building AI-Powered Applications}{On-device AI apps \href{https://lu.ma/vizhe6w2}{MLOps Community}}
-\resumeSubHeadingListEnd
+\vspace{-2pt}
+\footnotesize
+\href{https://youtu.be/xWFb4UqcLos}{SF AI Engineer Meetup} |
+\href{https://www.youtube.com/watch?v=mVSLkN5Vec0}{ONNX Community} |
+\href{https://www.youtube.com/watch?v=F_sdswYSjoM}{DroidCon London} |
+\href{https://voxel51.com/blog/recapping-the-ai-machine-learning-and-computer-meetup-november-14-2024}{Voxel51} |
+\href{https://embeddedvisionsummit.com/2024-deep-dive-session-qualcomm/}{Embedded Vision Summit} |
+\href{https://lu.ma/vizhe6w2}{MLOps Community}
+\normalsize
 
-\section{Community \& Teaching}
-\resumeSubHeadingListStart
-\resumeSubItem{OSS Contributions}{PyTorch: Worked on ATen, autograd, torch functions}
-\resumeSubItem{Mentor at CalHacks}{Mentored undergrad students during \href{https://calhacks.io/}{CalHacks} hackathon at UC Berkeley [2019]}
-\resumeSubItem{Teaching Assistant}{Graduate course \textit{Intro to Computer Vision} at Stony Brook University [Spring 2019]}
+%-----------OSS-----------------
+\section{Open Source}
+\vspace{-2pt}
+\footnotesize
+\textbf{PyTorch:} ATen, autograd, torch functions |
+\textbf{ONNX:} Spec, opset, and shape inference |
+\textbf{ORT-GenAI:} Collaborated with Microsoft for bring up
+\normalsize
 
-\resumeSubHeadingListEnd
-
+%-----------RECOGNITION-----------------
+\section{Recognition}
+\vspace{-2pt}
+\footnotesize
+\href{https://devpost.com/software/opencurriculum-by-wattba}{F8 Hackathon Finalist} - Presented to Mark Zuckerberg |
+\href{https://x.com/julien_c/status/1181629761761755137}{Huggingface Shout-out} - DistilGPT-2 via onnx-coreml |
+Mentor at \href{https://calhacks.io/}{CalHacks} UC Berkeley
+\normalsize
 
 %-----------EDUCATION-----------------
 \section{Education}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
     \resumeSubheading
       {\href{http://www.stonybrook.edu/}{SUNY StonyBrook University}}{StonyBrook, NY}
       {Master of Science in Computer Science}{Aug 2017 - May 2019}
-      % \resumeItemListStart
-      %    % \resumeItem{Thesis} {Face illumination estimation advised by \href{http://www3.cs.stonybrook.edu/~samaras/}{Professor Dimitris Samaras}; Member of \href{http://www3.cs.stonybrook.edu/~cvl/index.html}{Computer Vision Lab}}
-      %   % \resumeItem{Courses} {\href{http://www3.cs.stonybrook.edu/~minhhoai/courses/cse512/index.html}{Machine Learning}, \href{http://francesco.orabona.com/teaching.html}{Convex Optimization}, \href{http://www3.cs.stonybrook.edu/~anshul/courses/cse544_s18/}{Probs and Stats}, \href{http://www3.cs.stonybrook.edu/~cse537/index.html}{Artificial Intelligence}, \href{http://www3.cs.stonybrook.edu/~rezaul/CSE548-F17.html}{Analysis of Algorithm}}
-      %   \resumeItemListEnd
     \resumeSubheading
       {\href{http://vit.edu/}{Vishwakarma Institute of Technology}}{Pune, India}
       {Bachelor of Technology in Computer Engineering}{Aug 2011 - May 2015}
-  \resumeSubHeadingListEnd
-  
-
-
+\resumeSubHeadingListEnd
 
 %-----------SKILLS-----------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \item\small{
+    \item\footnotesize{
       \textbf{Languages:} C++, C, Python \hfill
       \textbf{ML Frameworks:} PyTorch, TensorFlow, Keras, ONNX \\
       \textbf{Compilers \& IR:} LLVM, SPIR-V, MIL, onnx-ir \hfill
-      \textbf{Tools \& Platforms:} CoreML, AIMET, Android, AI Hub
+      \textbf{Tools \& Platforms:} CoreML, AIMET, iOS, Android, AI Hub
     }
   \resumeSubHeadingListEnd
 
-%--------AWARDS------------
-\section{Recognition}
-\resumeSubHeadingListStart
-    \resumeSubItem{\href{https://devpost.com/software/opencurriculum-by-wattba}{F8 Hackathon Finalist}}{Presented to Meta CEO Mark Zuckerberg (2019)}
-    \resumeSubItem{\href{https://x.com/julien_c/status/1181629761761755137}{Huggingface Shout-out}}{DistilGPT-2 conversion via onnx-coreml}
-\resumeSubHeadingListEnd
 \end{document}
