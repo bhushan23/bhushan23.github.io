@@ -61,11 +61,11 @@
       <section class="summary-section">
         <h2>Summary</h2>
         <p>10+ years building ML infrastructure end-to-end: compilers, runtime, converters, and apps. Enabling AI-powered experiences on billions of devices every day.</p>
-        <p>Currently at Qualcomm, leading <span class="stack-trigger" data-layer="platform">quantization</span> and powering on-device GenAI via <a href="https://workbench.aihub.qualcomm.com/docs/" class="stack-trigger" data-layer="platform">AI Hub Workbench</a>.<br>
+        <p>Currently at Qualcomm, leading quantization and powering on-device GenAI via <a href="https://workbench.aihub.qualcomm.com/docs/">AI Hub Workbench</a>.<br>
         Previously,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Built <span class="stack-trigger" data-layer="platform">AI Hub</span> - first on-device <span class="stack-trigger" data-layer="platform">model zoo</span>, <span class="stack-trigger" data-layer="platform">SaaS platform</span>, and <span class="stack-trigger" data-layer="apps">apps</span>.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Shaped Apple's on-device ML stack - <span class="stack-trigger" data-layer="conversion">conversion tools</span>, <span class="stack-trigger" data-layer="ir">CoreML Framework</span>, <span class="stack-trigger" data-layer="ir">ML Runtime</span>.<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;Built <span class="stack-trigger" data-layer="compilers">GPU compilers</span> at NVIDIA - <span class="stack-trigger" data-layer="compilers">CUDA</span> and <span class="stack-trigger" data-layer="compilers">SPIR-V</span>.</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;Built AI Hub - first on-device model zoo, SaaS platform, and apps.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Shaped Apple's on-device ML stack - conversion tools, CoreML Framework, ML Runtime.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Built GPU compilers at NVIDIA - CUDA and SPIR-V.</p>
         <blockquote>Excited about ML efficiency across the spectrum - on-device, edge, and data center scale.</blockquote>
       </section>
 
@@ -382,21 +382,5 @@
     </aside>
   </div>
 
-<script>
-  // Stack layer hover effect
-  document.querySelectorAll('.stack-trigger').forEach(trigger => {
-    const layerId = 'layer-' + trigger.dataset.layer;
-    const layer = document.getElementById(layerId);
-
-    if (layer) {
-      trigger.addEventListener('mouseenter', () => {
-        layer.classList.add('highlighted');
-      });
-      trigger.addEventListener('mouseleave', () => {
-        layer.classList.remove('highlighted');
-      });
-    }
-  });
-</script>
 </body>
 </html>
